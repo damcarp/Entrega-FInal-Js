@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="contador.js" defer></script>
+    <title>Contador de Asistencias</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h2>Bienvenido al Contador de Asistencias</h2>
+        </header>
+        <article id="bienvenida">
+            <h3>Bienvenido al sistema de registro de asistencias</h3>
+            <p>Asegúrate de llenar todos los campos antes de continuar.</p>
+        </article>
+        <article id="inputs">
+            <label for="duracionCurso">Duración del curso (en días):</label>
+            <input type="number" id="duracionCurso" required><br>
+            <label for="cantidadAlumnos">Cantidad de alumnos:</label>
+            <input type="number" id="cantidadAlumnos" required><br>
+            <button id="confirmarDatos">Confirmar</button>
+        </article>
+        <section id="nombresAlumnos"></section>
+        <section id="resultados"></section>
+        <canvas id="graficoAsistencia" width="400" height="400"></canvas>
+    </div>
+</body>
+</html>

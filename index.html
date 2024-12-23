@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contadorBoton = document.getElementById('contadorBoton');
+            contadorBoton.addEventListener('click', () => {
+                const ventana = window.open(
+                    'contador_ventana.html',
+                    '_blank',
+                    'width=800,height=600'
+                );
+            });
+        });
+    </script>
+    <title>Contador de Asistencias</title>
+</head>
+<body>
+    <div class="contenedor">
+        <header>
+            <h1>Contador de Asistencias</h1>
+        </header>
+        <article id="descripcion">
+            <h3>Bienvenido al Contador de Asistencias</h3>
+            <p>Este programa te permite gestionar las asistencias de tus alumnos. Podrás registrar las asistencias diarias y conocer el estado de cada alumno al finalizar el curso.</p>
+            <ul>
+                <li><strong>Inicia el contador</strong> haciendo clic en "Iniciar Contador".</li>
+                <li><strong>Define los datos básicos:</strong> introduce la duración del curso y el número de alumnos.</li>
+                <li><strong>Registra los nombres:</strong> ingresa el nombre de cada alumno.</li>
+                <li><strong>Registra la asistencia diaria:</strong> selecciona "Presente" o "Ausente".</li>
+                <li><strong>Resultados automáticos:</strong> al final del curso, el programa calculará las asistencias y ausencias de cada alumno. Los alumnos que acumulen más del 30% de inasistencias serán marcados como <span class="reprobado">"Reprobado por Inasistencias"</span>.</li>
+            </ul>
+        </article>
+        <footer>
+            <button id="contadorBoton">Iniciar Contador</button>
+        </footer>
+    </div>
+</body>
+</html>

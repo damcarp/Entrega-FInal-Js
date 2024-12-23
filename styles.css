@@ -1,0 +1,193 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    flex-direction: column;
+    width: 100%; 
+    height: 100%;
+}
+
+.contenedor {
+    width: 90%;  
+    max-width: 800px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h3 {
+    color: #555;
+}
+
+ul {
+    text-align: left;
+    margin: 20px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+#nombresAlumnos, #resultados {
+    display: none;
+    margin-top: 20px;
+}
+
+#nombresAlumnos.show, #resultados.show {
+    display: block;
+}
+
+.reprobado {
+    color: red;
+}
+
+.aprobado {
+    color: green;
+}
+
+.resultado-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Contenedor para resultados */
+#resultados {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#resultados.show {
+    display: block;
+}
+
+/* Contenedor de la tabla */
+.tabla-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px; 
+}
+
+/* Contenedor del gráfico */
+.grafico-container {
+    width: 100%;
+    height: 400px;
+    max-width: 800px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .contenedor {
+        width: 95%; 
+        padding: 15px; 
+    }
+
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    input[type="number"], input[type="text"] {
+        font-size: 14px;
+    }
+
+    .grafico-container {
+        width: 100%;
+    }
+}
+
+
+#graficoAsistencia {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+}
+
+
+#mensaje-carga {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+.lista-alumnos {
+    margin: 20px 0;
+}
+
+.alumno {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    font-size: 16px;
+}
